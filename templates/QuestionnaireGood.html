@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/gquestionnairestyle.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/gquestionnairestyle.css') }}">
+	<br><br><br><br>
+
+	<body data-spy="scroll" data-target="#navbarResponsive">
+	<!-- Start Home Section -->
+	<div id="home">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<!--<div id="LogoContainer">
+				<a href="#", class="navbar-brand">Self.ai</a>
+			</div>-->
+			<a href="#" class="navbar-brand"><img src="../static/img/Logo.png"></a>
+			<button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html#course">Problem</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html#features">Solution</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html#resources">Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="contactForm.html">Get Started</a></li>
+				</ul>
+			</div>
+		</nav>
+	</body>
+	<br>
+	<div>
+		<header align="center">
+			<h1>A Questionnaire About Your Day</h1>
+		</header>
+		<br>
+<div class="container">
+  <form action="{{ url_for('summary')}}" method="post" enctype="multipart/form-data">
+
+    <label for="subject">What did you do today?</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <label for="subject">What made your day special?</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <label for="subject">Who made your day special?</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</html>

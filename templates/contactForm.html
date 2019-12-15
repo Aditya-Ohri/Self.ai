@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/contactFormStyle.css') }}">
+	<br><br><br><br>
+
+	<body data-spy="scroll" data-target="#navbarResponsive">
+	<!-- Start Home Section -->
+	<div id="home">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<!--<div id="LogoContainer">
+				<a href="#", class="navbar-brand">Self.ai</a>
+			</div>-->
+			<a href="#" class="navbar-brand"><img src="{{ url_for('static', filename='img/Logo.png') }}"></a>
+			<button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html#course">Problem</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html#features">Solution</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Home/index.html#resources">Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="contactForm.html">Get Started</a></li>
+				</ul>
+			</div>
+		</nav>
+	</body>
+<div class="container">
+
+  <form action="{{ url_for('webcam')}}" method="post" enctype="multipart/form-data">
+
+    <label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fname" value="Aaron Lio">
+
+    <label for="personnumber">Phone Number</label>
+    <input type="number" id="lname" name="lastname" value="6475744606">
+
+    <label for="pname">Parent/Friend Name</label>
+    <input type="text" id="fname" name="firstname" value="Aditya Ohri">
+
+    <label for="parentnumber">Parent/Friend Phone Number</label>
+    <input type="number" id="lname" name="lastname" value="6476857747">
+
+    <label for="counsellorname">Counsellor Name</label>
+    <input type="text" id="fname" name="firstname" value="Lleyton Ariton">
+
+    <label for="counsellornumber">Counsellor Phone Number</label>
+    <input type="number" id="lname" name="lastname" value="4169671111">
+
+    <input type="submit" value="Submit">
+</div>
