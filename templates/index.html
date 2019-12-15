@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Nuno - Responsive Bootstrap Theme</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fixed.css') }}">
+</head>
+	
+	<body data-spy="scroll" data-target="#navbarResponsive">
+		<div id="home">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<!---<a href="#" class="navbar-brand"><img src="./img/Logo.png"></a>
+			<button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>--->
+			<div class="navbartext">Self.ai</div>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html#course">Problem</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html#features">Solution</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html#resources">Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="contactForm.html">Get Started</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- End Navigation -->
+
+		<!-- Start Landing Page Section -->
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="caption text-center" >
+			<h1>Welcome to Self.ai</h1>
+			<h3>With your support system closer than ever, your mental health will only get better</h3>
+			<a class="btn btn-outline-light btn-lg" href="{{ url_for('questionnaire') }}">Get Started</a>
+		</div>
+		<!-- End Landing Page Section -->
+
+	</div>
+	<!-- End Home Section -->
+
+	<!-- Start Course Section -->
+	<div id="course" class="offset">
+		<!---Jumbotron--->
+		<div class="col-12 text-center">
+			<div class="narrow">
+			<h1 class="heading">The Problem</h1>
+			<div class="heading-underline"></div>
+			
+
+			<p class="lead" id="text">
+				Self.ai is a non-profit organization whose mission is to promote healthy minds and lifestyles as well as mindfulness about how our daily lives affect our mental health. This initiative was started by high-school students who are deeply passionate about mental health. Many people suffer in silence and don’t open up about their feelings in fear of judgment. This is a serious issue that can lead to isolation.
+			</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- End Course Section -->
+
+	<!-- Start Solution Section -->
+	<div id="features" class="offset">
+
+		<!-- Start Jumbotron -->
+		<div class="jumbotron text-center">
+			<div class="narrow">
+
+				<div class="col-12">
+					<h3 class="heading">Solution</h3>
+					<div class="heading-underline"></div>
+				</div>
+
+				<div class="row text-center">
+					<p class="lead"> 
+					We built an app that uses artificial intelligence to analyze your emotions through your voice and facial features. Our inspiration was a personal experience that changed us as people, this project is very close to our hearts. We hope our app serves as a companion that allows people to let out all their feelings when they are feeling down or self-critical. 
+				</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Jumbotron -->
+
+	</div>
+	<!-- End Solution Section -->
+
+	<!-- Start Features Section -->
+	<div id="resources" class="offset">
+
+		<div class="fixed-background">
+			<div class="row dark text-center">
+				<div class="col-12">
+					<br><br><br><br><br>
+					<h3 class="heading">Features</h3>
+					<div class="heading-underline"></div>
+				</div>
+					<br><br><br><br><br>
+				<div class="col-md-4">
+					<h3>Facial Scanner</h3>
+					<div class="feature">
+						<i class="fas fa-meh-blank fa-3x" style="color: rgba(78, 155, 204)"></i>
+					</div>
+					<p class="lead">Our software reads key aspects of faces to judge your perception</p>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Speech and Tone analysis</h3>
+					<div class="feature">
+						<i class="fas fa-microphone fa-3x" style="color: rgba(78, 155, 204);"></i>
+					</div>
+					<p class="lead">Using our NLP algorithm, Self.ai analyzes user audio to determine your wellbeing</p>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Sentiment Interpretation</h3>
+					<div class="feature">
+						<i class="fas fa-grin-wink fa-3x" style="color: rgba(78, 155, 204);"></i>
+					</div>
+					<p class="lead">By combining our facial, audio, and text analysis, Self.ai creates an summary of your mental state for you and your support group</p>
+				</div>
+			</div>
+
+			<div class="fixed-wrap">
+				<div class="fixed"></div>
+			</div>
+		</div>
+	</div>
+	<!-- End Features Section -->
+
+	<!-- Start Contact Section -->
+	<div id="contact" class="offset">
+		<footer>
+			<div class="row justify-content-center">
+
+				<div class="col-md-5 text-center">
+				<div class="contactText">Self.ai</div>
+					<p>
+						At our core of Self.ai is a design and development solution
+						that represents everything you need to succeed in the hustle and bustle of 
+						the modern world.
+					</p>
+					<strong>Contact Info</strong>
+					<p>(647) 574-4606<br>aaronlio003@gmail.com</p>
+					<a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+				</div>
+
+				<hr class="socket">
+				&copy; Self.ai
+
+			</div>
+		</footer>
+	</div>
+	<!-- End Contact Section -->
+
+	<!--- Script Source Files -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	<!--- End of Script Source Files -->
+
+</body>
+
+</html>

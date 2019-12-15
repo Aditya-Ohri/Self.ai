@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <style>
+        #header {
+            text-align: center;
+            font-family: "Microsoft Yi Baiti";
+        }
+    </style>
+</head>
+<body>
+<h1 id="header">Your Dashboard</h1>
+<canvas id="myChart" width="200" height="200"></canvas>
+<canvas id="myBarChart" width="200" height="200"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Mental Well-being", "Mental Illness"],
+            datasets: [{
+                backgroundColor: [
+                    "#2ecc71",
+                    "#3498db",
+                    "#95a5a6",
+                    "#9b59b6",
+                    "#f1c40f",
+                    "#e74c3c",
+                    "#34495e"
+                ],
+                data: [23.72, 76.28]
+            }]
+        }
+    });
+    var ctx2 = document.getElementById('myBarChart').getContext('2d');
+    var chart = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['happiness', 'calmness', 'sadness', 'anger', 'fear'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [6, 10, 51, 69, 40]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
+
+</body>
+</html>

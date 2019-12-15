@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Webcam</title>
+
+<style>
+#header{
+    text-align: center;
+    margin-top: 15px;
+    font-family: "Microsoft Yi Baiti";
+}
+#container {
+	margin-top: 0px;
+    margin-left: 175px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+	width: 1000px;
+	height: 500px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 1000px;
+	height: 500px;
+	background-color: #666;
+}
+#button1{
+    width: 300px;
+    height: 40px;
+}
+#button2{
+    width: 300px;
+    height: 40px;
+}
+#buttons{
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+<h1 id="header">
+    How are you feeling today?
+</h1>
+
+<div id="container">
+	<video autoplay="true" id="videoElement">
+
+	</video>
+</div>
+<div id="buttons">
+    <form action="{{ url_for('speech_to_text')}}" method="post" enctype="multipart/form-data">
+    <button type="submit" id="button1" value="start_speech">Start</button>
+    </form>
+    <form action="{{ url_for('analysis')}}" method="post" enctype="multipart/form-data">
+    <button type="submit" id="button2" value="submit">Submit</button>
+    </form>
+</div>
+<script>
+var video = document.querySelector("#videoElement");
+var container = document.getElementById("container")
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+
+container.onclick = () => {
+    container.remove();
+    var stream = video.srcObject;
+    var tracks = stream.getTracks();
+
+    for (var i = 0; i < tracks.length; i++) {
+        var track = tracks[i];
+        track.stop();
+  }
+
+  video.srcObject = null;
+}
+</script>
+</body>
+</html>
